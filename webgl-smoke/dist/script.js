@@ -32,7 +32,7 @@ function init() {
     textGeo = new THREE.PlaneGeometry(300,300);
     THREE.ImageUtils.crossOrigin = ''; //Need this to pull in crossdomain images from AWS
     // textTexture = new THREE.TextureLoader().load('AdventurersBeware.png');
-    textTexture = THREE.ImageUtils.loadTexture('dist/AdventurersBeware.png');
+    textTexture = THREE.ImageUtils.loadTexture('https://raw.githubusercontent.com/rsboudreaux/jumajni-text/master/webgl-smoke/dist/AdventurersBeware.png');
     textMaterial = new THREE.MeshLambertMaterial({color: 0x00ffff, opacity: 1, map: textTexture, transparent: true, blending: THREE.AdditiveBlending})
     text = new THREE.Mesh(textGeo,textMaterial);
     text.position.z = 800;
